@@ -1,0 +1,26 @@
+*{
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera * ez segíti, hogy a szám tipusú mezők helyére ne tudjunk betűt írni */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+    }
+
+
+/* Firefox */
+/*
+input[type=number] {
+-moz-appearance: textfield;
+    }
+*/
+
+.custom-bg{
+    background-color: rgb(31, 40, 115);
+}
+
+.custom-bg:hover{
+    background-color: rgb(18, 96, 152);
+}
