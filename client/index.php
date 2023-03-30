@@ -37,7 +37,7 @@
                     <a class="nav-link" href="index.php?prog=jaratok.php">Járataink</a>
                     </li>
                     <li class="nav-item me-2">
-                    <a class="nav-link" href="index.php?prog=idojaras.php">Időjárás</a>
+                    <a class="nav-link" href="index.php?prog=idojarasok.php">Időjárás</a>
                     </li>
                     <li class="nav-item me-2">
                     <a class="nav-link" href="index.php?prog=elerhetoseg.php">Elérhetőség</a>

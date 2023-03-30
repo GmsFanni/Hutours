@@ -36,8 +36,10 @@ $tempMax=$data->main->temp_max;
 $tempMin=$data->main->temp_min;
 $humidity=$data->main->humidity;
 $wind=$data->wind->speed;
+
+
 // Meghatározzuk az aktuális időt
 $currentTime = time();
 
-echo json_encode(["name"=>$name,"descr"=>$descr,"wind"=>$wind]);
+echo json_encode(["name"=>$name,"descr"=>$descr,"imgUrl"=>$imgUrl,"tempMax"=>$tempMax,"tempMin"=>$tempMin,"humidity"=>$humidity,"wind"=>$wind]);
 ?>
