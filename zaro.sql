@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Már 29. 21:28
+-- Létrehozás ideje: 2023. Már 30. 09:40
 -- Kiszolgáló verziója: 10.4.21-MariaDB
--- PHP verzió: 8.0.11
+-- PHP verzió: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -75,44 +75,45 @@ INSERT INTO `foglalas` (`foglalas_id`, `uid`, `idopont_id`, `datum`) VALUES
 CREATE TABLE `helyek` (
   `H_id` int(11) NOT NULL,
   `Varosok` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `foto_url` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL
+  `foto_url` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `city_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `helyek`
 --
 
-INSERT INTO `helyek` (`H_id`, `Varosok`, `foto_url`) VALUES
-(1, 'Esztergom', 'esztergom.jpg'),
-(2, 'Kecskemét', 'Kecskemet.jpg'),
-(3, 'Pécs', 'pecs.jpg'),
-(4, 'Szilvásvárad', 'szilvasvarad.jpg'),
-(5, 'Szeged', 'Szeged.jpg'),
-(6, 'Veszprém', 'veszprem.jpg'),
-(7, 'Győr', 'gyor.jpg'),
-(8, 'Miskolc', 'miskolc.jpg'),
-(9, 'Szeged', 'szeged.jpg'),
-(10, 'Siófok', 'siofok.jpg'),
-(11, 'Zalaegerszeg', 'zalaegerszeg.jpg'),
-(12, 'Hollókő', 'holloko.jpg'),
-(13, 'Kékestető', 'kekesteto.jpg'),
-(14, 'Békéscsaba', 'bekescsaba.jpg'),
-(15, 'Debrecen', 'debrecen.jpg'),
-(16, 'Tatabánya', 'tatabanya.jpg'),
-(17, 'Tihany', 'tihany.jpg'),
-(18, 'Eger', 'eger.jpg'),
-(19, 'Keszthely', 'keszthely.jpg'),
-(20, 'Hévíz', 'heviz.jpg'),
-(21, 'Villány', 'villany.jpg'),
-(22, 'Tata', 'tata.jpg'),
-(23, 'Hortobágy', 'hortobagy.jpg'),
-(24, 'Aggtelek', 'aggtelek.jpg'),
-(25, 'Mohács', 'mohacs.jpg'),
-(26, 'Gödöllő', 'godollo.jpg'),
-(27, 'Pannonhalma', 'pannonhalma.jpg'),
-(28, 'Nyíregyháza', 'nyiregyhaza.jpg'),
-(29, 'Sopron', 'sopron.jpg'),
-(30, 'Bükkszék', 'bukkszek.jpg');
+INSERT INTO `helyek` (`H_id`, `Varosok`, `foto_url`, `city_id`) VALUES
+(1, 'Esztergom', 'esztergom.jpg', 3053163),
+(2, 'Kecskemét', 'Kecskemet.jpg', 3050434),
+(3, 'Pécs', 'pecs.jpg', 3046526),
+(4, 'Szilvásvárad', 'szilvasvarad.jpg', 715217),
+(5, 'Szeged', 'Szeged.jpg', 715429),
+(6, 'Veszprém', 'veszprem.jpg', 3042929),
+(7, 'Győr', 'gyor.jpg', 3052009),
+(8, 'Miskolc', 'miskolc.jpg', 717582),
+(9, 'Szeged', 'szeged.jpg', 715429),
+(10, 'Siófok', 'siofok.jpg', 3045332),
+(11, 'Zalaegerszeg', 'zalaegerszeg.jpg', 3042638),
+(12, 'Hollókő', 'holloko.jpg', 3045804),
+(13, 'Kékestető', 'kekesteto.jpg', 719280),
+(14, 'Békéscsaba', 'bekescsaba.jpg', 722437),
+(15, 'Debrecen', 'debrecen.jpg', 721472),
+(16, 'Tatabánya', 'tatabanya.jpg', 3044082),
+(17, 'Tihany', 'tihany.jpg', 3043927),
+(18, 'Eger', 'eger.jpg', 721239),
+(19, 'Keszthely', 'keszthely.jpg', 3050212),
+(20, 'Hévíz', 'heviz.jpg', 3051477),
+(21, 'Villány', 'villany.jpg', 3042871),
+(22, 'Tata', 'tata.jpg', 3044083),
+(23, 'Hortobágy', 'hortobagy.jpg', 719895),
+(24, 'Aggtelek', 'aggtelek.jpg', 715355),
+(25, 'Mohács', 'mohacs.jpg', 3047967),
+(26, 'Gödöllő', 'godollo.jpg', 3052236),
+(27, 'Pannonhalma', 'pannonhalma.jpg', 3046693),
+(28, 'Nyíregyháza', 'nyiregyhaza.jpg', 716935),
+(29, 'Sopron', 'sopron.jpg', 3045190),
+(30, 'Bükkszék', 'bukkszek.jpg', 3054597);
 
 -- --------------------------------------------------------
 
