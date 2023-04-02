@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Már 30. 09:40
+-- Létrehozás ideje: 2023. Ápr 02. 20:53
 -- Kiszolgáló verziója: 10.4.21-MariaDB
--- PHP verzió: 8.0.10
+-- PHP verzió: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cards` (
   `card_id` int(50) NOT NULL,
-  `card_img` int(50) NOT NULL,
+  `card_img` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `card_cim` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `card_ar` int(50) NOT NULL,
   `card_arban` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
@@ -42,9 +42,9 @@ CREATE TABLE `cards` (
 --
 
 INSERT INTO `cards` (`card_id`, `card_img`, `card_cim`, `card_ar`, `card_arban`, `card_reszlet`, `ertekeles`) VALUES
-(1, 0, 'Arany csomag(2 napra)', 100000, 'Belepőjegyek, 3 étkezés, exkluzív programok', 'Városnéző kocsikázás, Idegenvezetés, taxizás', 5),
-(2, 0, 'Ezüst csomag(1 napra)', 70000, 'Belépőjegyek, 2 étkezés, programok', 'varosnéző túra, 3x taxizás', 3),
-(3, 0, 'Bronz csomag', 50000, 'Belépőjegy, Ebéd, 30 perc idegenvezetés', 'Program 1', 2);
+(1, '1beach.png', 'Arany csomag(2 napra)', 100000, 'Belepőjegyek, 3 étkezés, exkluzív programok', 'Városnéző kocsikázás, Idegenvezetés, taxizás', 5),
+(2, '2forest.png', 'Ezüst csomag(1 napra)', 70000, 'Belépőjegyek, 2 étkezés, programok', 'varosnéző túra, 3x taxizás', 3),
+(3, '3town.png', 'Bronz csomag', 50000, 'Belépőjegy, Ebéd, 30 perc idegenvezetés', 'Program 1', 2);
 
 -- --------------------------------------------------------
 
@@ -208,7 +208,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `created_at`, `role`) VALUES
 (32, 'Fanni', 'fanni@fanni', '$2y$10$Qqdb.rArNn1Cio.bM3g6jeCZu8bVNS2TiOTjeCgjuVUhgV/Rfgt4u', '2023-03-21 14:06:04', 'user'),
 (34, 'valaki', 'valaki@valaki', '$2y$10$tjOkEsP77Nr86bPsEfLzOeA6jf.awpmwKS4BDG0MdKDr90NyX2MM.', '2023-03-28 06:49:51', 'user'),
-(35, 'KAM', 'kmagdi@kkando.hu', '$2y$10$000h.h1oI.yPbuXBOh/ltux4ht1mfEiUL9DkszWiKFxQsZF80SMwy', '2023-03-28 07:24:43', 'user');
+(35, 'KAM', 'kmagdi@kkando.hu', '$2y$10$000h.h1oI.yPbuXBOh/ltux4ht1mfEiUL9DkszWiKFxQsZF80SMwy', '2023-03-28 07:24:43', 'user'),
+(36, 'Fannika', 'gemesi@gmail.com', '$2y$10$/b4u7ekvLlYEUDYTq/bIiewGrzW8pdy5wTK85QP0bE0xChIgtdnki', '2023-04-02 18:43:17', 'user');
 
 -- --------------------------------------------------------
 
@@ -227,6 +228,12 @@ CREATE TABLE `velemeny` (
 --
 -- Indexek a kiírt táblákhoz
 --
+
+--
+-- A tábla indexei `cards`
+--
+ALTER TABLE `cards`
+  ADD PRIMARY KEY (`card_id`);
 
 --
 -- A tábla indexei `foglalas`
@@ -289,7 +296,7 @@ ALTER TABLE `idopontok`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- Megkötések a kiírt táblákhoz

@@ -1,6 +1,6 @@
 <h1 class="mt-2 text-center">Járataink</h1>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <table class="table table-striped">
             <thead class="thead-dark">
                 <th class="text-center"><h4>Helyeink, ahova tartunk</h4></th>
@@ -12,9 +12,24 @@
     </div>
 
     <div class="col-md-6 details">
+        <table class="table table-secondary text-center">
+            <tr>
+                        <th>Indulás</th>
+                        <th>Óra:perc:mp</th>
+                        <th>Indulás vissza</th>
+                        <th>Óra:perc:mp</th>
+                        <th></th>
+            </tr>
+
+            <tbody id="tbd">
+
+            </tbody>
+        </table>
     
     </div>
+
 </div>
+
 
 
 
@@ -32,11 +47,12 @@
         
         `).join('')
     }
+    
 
     function details(objDom){
         let id=objDom.id
         console.log('id:',id)
-        getData('../server/idok.php?id='+id, renderDetails)
+        getData('../server/idok.php?id='+id, renderDetails, renderTbl)
 
     }
     function renderDetails(data){
@@ -46,12 +62,13 @@
             str+=`
             <img class="img-fluid" src="photos/varosok/${obj.foto_url}" alt="kép">
             
-            <table>
+            <table class="table table-secondary text-center">
                     <tr>
-                        <th>Mikor indulunk</th>
-                        <th>Hány órakkor?</th>
-                        <th>Mikor indulunk vissza</th>
-                        <th>Hány órakkor?</th>
+                        <th>Indulás</th>
+                        <th>Óra:perc:mp</th>
+                        <th>Indulás vissza</th>
+                        <th>Óra:perc:mp</th>
+                        <th></th>
                     </tr>
 
             <tbody>
@@ -60,16 +77,40 @@
                     <td>${obj.ido_oda}</td>
                     <td>${obj.ido_visszamikor}</td>
                     <td>${obj.ido_vissza}</td>
+                    <td><button class="btn-secondary" onclick="foglal(this)">Foglalás</button></td>
             </tr>
+
             </tbody>
+            
             </table>
+            
             <hry
         `
         }
-        document.querySelector('.details').innerHTML = str
-            
-        
+        document.querySelector('.details').innerHTML = str        
         }
+
+        function foglal(data){
+            console.log(ok);
+        }
+
+        function renderTbl(data){
+            ///console.log(data)
+            document.querySelector('#tbd').innerHTML=data.map(obj=>`
+                <tr>
+                    
+                    <td>${obj.ido_mikoroda}</td>
+                    <td>${obj.ido_oda}</td>
+                    <td>${obj.ido_visszamikor}</td>
+                    <td>${obj.ido_vissza}</td>
+                </tr>
+             
+            `).join('')
+
+        }
+        
+        
+
         
     
 
