@@ -1,6 +1,6 @@
 <h1 class="mt-2 text-center">Járataink</h1>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <table class="table table-striped">
             <thead class="thead-dark">
                 <th class="text-center"><h4>Helyeink, ahova tartunk</h4></th>
@@ -11,15 +11,9 @@
         </table>
     </div>
 
-    <div class="col-md-6 details">
+    <div class="col-md-6 details mt-2 ">
         <table class="table table-secondary text-center">
-            <tr>
-                        <th>Indulás</th>
-                        <th>Óra:perc:mp</th>
-                        <th>Indulás vissza</th>
-                        <th>Óra:perc:mp</th>
-                        <th></th>
-            </tr>
+            
 
             <tbody id="tbd">
 
@@ -60,7 +54,7 @@
         let str=''
         for(let obj of data){
             str+=`
-            <img class="img-fluid" src="photos/varosok/${obj.foto_url}" alt="kép">
+            <img class="img-fluid mb-2" src="photos/varosok/${obj.foto_url}" alt="kép">
             
             <table class="table table-secondary text-center">
                     <tr>
@@ -94,16 +88,11 @@
             console.log(ok);
         }
 
+        
         function renderTbl(data){
             ///console.log(data)
             document.querySelector('#tbd').innerHTML=data.map(obj=>`
-                <tr>
-                    
-                    <td>${obj.ido_mikoroda}</td>
-                    <td>${obj.ido_oda}</td>
-                    <td>${obj.ido_visszamikor}</td>
-                    <td>${obj.ido_vissza}</td>
-                </tr>
+                
              
             `).join('')
 

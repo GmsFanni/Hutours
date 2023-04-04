@@ -58,7 +58,7 @@
 
                         <div class="mt-3">
                             <label class="form-label">Név</label>
-                            <input type="text" class="form-control shadow-none">
+                            <input type="text" class="form-control shadow-none name">
                         </div>
 
                         <div class="mt-3">
@@ -82,7 +82,7 @@
                         <br>
                         </div>
 
-                            <button type="button" class="btn btn-primary shadow-none">Küldés</button>
+                            <button type="button" class="btn btn-primary shadow-none " onblur="klikk(this)">Küldés</button>
                     
                 </div>
                 
@@ -93,6 +93,21 @@
     </div>
 
     <?php require('labjegyzet.php'); ?>
+
+    <script>
+
+        function klikk(){
+            let name = document.getElementById('name').value;
+            if(name > 10){
+                alert("Sok a neved!")
+            }
+            else{
+
+            }
+
+        }
+
+    </script>
     
     
 </body>
