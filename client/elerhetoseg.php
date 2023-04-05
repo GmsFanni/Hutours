@@ -56,24 +56,28 @@
                 <div class="bg-white rounded shadow p-4">
                         <h5 class="text-center fw-bold">Küldj nekünk üzenetet!</h5>
 
-                        <div class="mt-3">
+                        <div class="mt-3" >
                             <label class="form-label">Név</label>
-                            <input type="text" class="form-control shadow-none name">
+                            <input type="text" class="form-control shadow-none" id="nev">
+                           
                         </div>
 
                         <div class="mt-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control shadow-none">
+                            <input type="email" class="form-control shadow-none" id="email">
+                            
                         </div>
 
                         <div class="mt-3">
                             <label class="form-label">Tárgy</label>
-                            <input type="text" class="form-control shadow-none">
+                            <input type="text" class="form-control shadow-none" id="targy">
+                            
                         </div>
 
                         <div class="mt-3">
                             <label class="form-label">Írj nekünk!</label>
-                            <textarea class="form-control shadow-none" rows="5" style="resize: none;"></textarea>
+                            <textarea class="form-control shadow-none" rows="5" style="resize: none;" id="area"></textarea>
+                            
                         </div>
 
                         <div class="mt-3">
@@ -82,7 +86,7 @@
                         <br>
                         </div>
 
-                            <button type="button" class="btn btn-primary shadow-none " onblur="klikk(this)">Küldés</button>
+                        <button type="button" class="btn btn-primary shadow-none " id="myButton" onclick="klikk()">Küldés</button>
                     
                 </div>
                 
@@ -91,21 +95,60 @@
         </div>
 
     </div>
-
+    
     <?php require('labjegyzet.php'); ?>
+
+    
 
     <script>
 
+    
+
+
+        function uresCheck(){
+            const nev = document.getElementById('nev')
+            const email = document.getElementById('email');
+            const targy = document.getElementById('targy');
+            const area = document.getElementById('area');
+
+
+            if (nev.value != "" && email.value !="" && targy.value !="" && area.value !="") return true;
+            else{ alert("Töltse ki az összes mezőt");  return false; }
+        }
+
+        function tartalmaz(){
+            const email2 = document.getElementById('email');
+        
+		    if (email2.indexOf("@") !== -1) return true;
+            else { alert("Email cím helytelen!");  return false;}
+			
+        }
+
+
+
+
+
+
         function klikk(){
-            let name = document.getElementById('name').value;
-            if(name > 10){
-                alert("Sok a neved!")
-            }
-            else{
+            if (!uresCheck()) return false;
+            if (!tartalmaz()) return false;
+
+            /*
+            const nev = document.getElementById('nev')
+            const errorMessage = document.getElementById('errorMessage');
+
+            if(nev.value.trim() === ''){
+                errorMessage.innerText = 'Az input mező üres!';
 
             }
+            else {
+            errorMessage.innerText = ''; 
+        }*/
 
         }
+        
+
+        
 
     </script>
     

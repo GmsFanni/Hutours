@@ -106,4 +106,6 @@
 
 </script>
 
+<?php require('labjegyzet.php'); ?>
+
 
