@@ -46,33 +46,28 @@
                     </li>
                 </ul>
                 
-                <?php
+                
+                      <?php
                       if(isset($_SESSION['username'])){
                         echo "
-                        <div class='d-flex'>
-                          <a class='nav-link btn btn-outline-dark shadow-none me-lg-3 me-2 href='index.php?prog=userfelulet.php'>{$_SESSION['username']}</a>
-                        </div>
-                        <div class='d-flex'>
-                          <a class='btn btn-outline-dark shadow-none' href='index.php?prog=logout.php'>Logout</a>
-                        </div>
+                          <div class='d-flex'>
+                            <a class='nav-link btn btn-outline-dark shadow-none me-lg-3 me-2' href='index.php?prog=userfelulet.php'>{$_SESSION['username']}</a>
+                          </div>
+                          <div class='d-flex'>
+                            <a class='btn btn-outline-dark shadow-none' href='index.php?prog=logout.php'>Logout</a>
+                          </div>
                         ";
                       }else{
                         echo '
-
-                                <div class="d-flex" id="au-name">
-                                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal" >
-                                        <a href="index.php?prog=login.php"></a>Bejelentkezés
-                                    </button>
-                                </div>
-
-                                <div class="d-flex" id="au-lu">
-                                    <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
-                                        Regisztráció</button>
-                                </div>
+                          <div class="d-flex" id="au-name">
+                            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Bejelentkezés</button>
+                          </div>
+                          <div class="d-flex" id="au-lu">
+                            <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</button>
+                          </div>
                         ';
                       }
-
-                ?>
+                      ?>
 
     
                 

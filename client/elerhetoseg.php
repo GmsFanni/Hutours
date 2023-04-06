@@ -58,13 +58,13 @@
 
                         <div class="mt-3" >
                             <label class="form-label">Név</label>
-                            <input type="text" class="form-control shadow-none" id="nev">
+                            <input type="text" class="form-control shadow-none" id="nev" required>
                            
                         </div>
 
                         <div class="mt-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control shadow-none" id="email">
+                            <input type="email" class="form-control shadow-none" id="emailcim" required>
                             
                         </div>
 
@@ -76,8 +76,9 @@
 
                         <div class="mt-3">
                             <label class="form-label">Írj nekünk!</label>
-                            <textarea class="form-control shadow-none" rows="5" style="resize: none;" id="area"></textarea>
                             
+                            <textarea class="form-control shadow-none" rows="5" maxlength="250" style="resize: none;" id="area"></textarea>
+                            <small class="form-text text-muted float-end"><span id="charCount" class="float-right">0</span>/250</small>
                         </div>
 
                         <div class="mt-3">
@@ -102,14 +103,19 @@
 
     <script>
 
-    
-
+        function updateCharCount() {
+            var textarea = document.getElementById("area");
+            var charCount = document.getElementById("charCount");
+            charCount.textContent = textarea.value.length;
+        }
+        var textarea = document.getElementById("area");
+        textarea.addEventListener("input", updateCharCount);
 
         function uresCheck(){
-            const nev = document.getElementById('nev')
-            const email = document.getElementById('email');
-            const targy = document.getElementById('targy');
-            const area = document.getElementById('area');
+            const nev = document.getElementById('nev').value;
+            const email = document.getElementById('emailcim').value;
+            const targy = document.getElementById('targy').value;
+            const area = document.getElementById('area').value;
 
 
             if (nev.value != "" && email.value !="" && targy.value !="" && area.value !="") return true;
@@ -117,11 +123,19 @@
         }
 
         function tartalmaz(){
-            const email2 = document.getElementById('email');
-        
-		    if (email2.indexOf("@") !== -1) return true;
-            else { alert("Email cím helytelen!");  return false;}
-			
+            var email2 = document.getElementById("emailcim").value;
+
+            // Ellenőrizzük, hogy az email2 változó egy string típusú értéket tartalmaz-e
+                if (typeof email2 === "string") {
+                    // Ellenőrizzük, hogy az email2 változó tartalmazza-e az @ karaktert
+                    if (email2.indexOf("@") !== -1 && email2.indexOf(".") !== -1) {
+                    return true;
+                    } else {
+                    alert("Az email cím érvénytelen!"); return false;
+                    }
+                } else {
+                    alert("Az email cím érvénytelen!"); return false;
+                }	
         }
 
 
@@ -132,25 +146,15 @@
         function klikk(){
             if (!uresCheck()) return false;
             if (!tartalmaz()) return false;
-
-            /*
-            const nev = document.getElementById('nev')
-            const errorMessage = document.getElementById('errorMessage');
-
-            if(nev.value.trim() === ''){
-                errorMessage.innerText = 'Az input mező üres!';
-
-            }
-            else {
-            errorMessage.innerText = ''; 
-        }*/
-
         }
-        
 
+
+        
         
 
     </script>
+
+       
     
     
 </body>
