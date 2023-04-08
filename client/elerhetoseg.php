@@ -54,42 +54,42 @@
 
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
+                <div id="message"></div>
+                <form action="../server/velemeny.php" method="POST" id="myForm">
                         <h5 class="text-center fw-bold">Küldj nekünk üzenetet!</h5>
 
                         <div class="mt-3" >
-                            <label class="form-label">Név</label>
-                            <input type="text" class="form-control shadow-none" id="nev" required>
+                            <label class="form-label" for="v_nev" id="velemeny-form">Név</label>
+                            <input type="text" class="form-control shadow-none" id="v_nev" name="v_nev" required>
                            
                         </div>
 
                         <div class="mt-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control shadow-none" id="emailcim" required>
+                            <label class="form-label" for="v_email">Email</label>
+                            <input type="email" class="form-control shadow-none" id="v_email" name="v_email" required>
                             
                         </div>
 
                         <div class="mt-3">
-                            <label class="form-label">Tárgy</label>
-                            <input type="text" class="form-control shadow-none" id="targy">
+                            <label class="form-label" for="v_targy">Tárgy</label>
+                            <input type="text" class="form-control shadow-none" id="v_targy" name="v_targy">
                             
                         </div>
 
                         <div class="mt-3">
-                            <label class="form-label">Írj nekünk!</label>
+                            <label class="form-label" for="v_szoveg">Írj nekünk!</label>
                             
-                            <textarea class="form-control shadow-none" rows="5" maxlength="250" style="resize: none;" id="area"></textarea>
+                            <textarea class="form-control shadow-none" rows="5" maxlength="250" style="resize: none;" id="v_szoveg" name="v_szoveg"></textarea>
                             <small class="form-text text-muted float-end"><span id="charCount" class="float-right">0</span>/250</small>
                         </div>
-
-                        <div class="mt-3">
-                        <input type="checkbox" id="vehicle1" value="Hírlevél">
-                        <label>Iratkozz fel hírlevelünkre!</label>
-                        <br>
+                            <br>
+                        <input type="submit" value="Küldés" class="btn btn-primary shadow-none " id="myButton" onclick="klikk()">
+                        
                         </div>
-
-                        <button type="button" class="btn btn-primary shadow-none " id="myButton" onclick="klikk()">Küldés</button>
-                    
+                        
+                    </form>
                 </div>
+
                 
             </div>
 
@@ -104,18 +104,18 @@
     <script>
 
         function updateCharCount() {
-            var textarea = document.getElementById("area");
+            var textarea = document.getElementById("v_szoveg");
             var charCount = document.getElementById("charCount");
             charCount.textContent = textarea.value.length;
         }
-        var textarea = document.getElementById("area");
+        var textarea = document.getElementById("v_szoveg");
         textarea.addEventListener("input", updateCharCount);
 
         function uresCheck(){
-            const nev = document.getElementById('nev').value;
-            const email = document.getElementById('emailcim').value;
-            const targy = document.getElementById('targy').value;
-            const area = document.getElementById('area').value;
+            const nev = document.getElementById('v_nev').value;
+            const email = document.getElementById('v_email').value;
+            const targy = document.getElementById('v_targy').value;
+            const area = document.getElementById('v_szoveg').value;
 
 
             if (nev.value != "" && email.value !="" && targy.value !="" && area.value !="") return true;
@@ -123,7 +123,7 @@
         }
 
         function tartalmaz(){
-            var email2 = document.getElementById("emailcim").value;
+            var email2 = document.getElementById("v_email").value;
 
             // Ellenőrizzük, hogy az email2 változó egy string típusú értéket tartalmaz-e
                 if (typeof email2 === "string") {
@@ -149,9 +149,31 @@
         }
 
 
+    $(document).ready(function() {
+        // form küldése AJAX-szal
+        $('#myForm').submit(function(event) {
+            event.preventDefault();
+            $.ajax({
+            url: '../server/velemeny.php',
+            type: 'POST',
+            data: $('#myForm').serialize(),
+            success: function(response) {
+                alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")
+                /*
+                $('#message').html('Sikeres mentés!');
+                $('#message').fadeIn();*/
+            }
+            });
+        });
         
-        
+        // felugró ablak bezárása
+        $('#message').click(function() {
+            $(this).fadeOut();
+        });
+    });
 
+
+        
     </script>
 
        

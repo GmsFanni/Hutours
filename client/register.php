@@ -27,15 +27,7 @@
                 <span class="badge bg-light text-dark mb-3 text-wrap lh-base">Töltse ki a megadott ürlapot a mezőknek megfelelően és regisztráljon!</span>
                 <div class="container-fluid">
                     <div class="row">
-                       <!--
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Vezetéknév</label>
-                            <input id="VezetekN" type="text" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Keresztnév</label>
-                            <input id="KeresztN" type="text" class="form-control shadow-none">
-                        </div> -->
+                       
                         <div class="col-md-4 ps-0 mb-3">
                             <label class="form-label">Felhasználónév</label>
                             <input id="username" name="username" onblur="vrfUsername(this)" type="text" class="form-control shadow-none">
@@ -48,31 +40,7 @@
                             <label class="form-label">Jelszó</label>
                             <input id="passw" name="password" type="password" class="form-control shadow-none">
                         </div>
-                        <!--
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Jelszó mégegyszer</label>
-                            <input id="Pass2" type="password" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-6 ps-0 mb-3">
-                            <label class="form-label">Születési idő</label>
-                            <input id="birth" type="date" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-6 ps-0 mb-3">
-                            <label class="form-label">Telefonszám</label>
-                            <input id="phone" type="number" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Irányítószám</label>
-                            <input id="postcode" type="number" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Utca</label>
-                            <input id="utca" type="text" class="form-control shadow-none">
-                        </div>
-                        <div class="col-md-4 ps-0 mb-3">
-                            <label class="form-label">Házszám</label>
-                            <input id="Hnumber" type="text" class="form-control shadow-none">
-                        </div> -->
+                        
 
                     </div>
                 </div>
