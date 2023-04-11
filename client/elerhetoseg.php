@@ -158,17 +158,17 @@
             type: 'POST',
             data: $('#myForm').serialize(),
             success: function(response) {
-                alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")
-                /*
-                $('#message').html('Sikeres mentés!');
-                $('#message').fadeIn();*/
+                alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")   
             }
+            
+
             });
         });
         
         // felugró ablak bezárása
         $('#message').click(function() {
             $(this).fadeOut();
+            
         });
     });
 

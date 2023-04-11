@@ -12,188 +12,53 @@
     <title>HUTOURS</title>
 </head>
 <body>
+<div class="container-fluid px-lg-4 mt-4">
 
-
-        <div class="container-fluid px-lg-4 mt-4">
-
-            <div class="swiper swiper-container">
-                        <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="photos/bpkep.jpg" class="w-100 d-block"/><div class="swiper-lazy-preloader"></div></div>
-                        <div class="swiper-slide"><img loading="lazy" src="photos/aggtelek.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
-                        <div class="swiper-slide"><img loading="lazy" src="photos/keszthelykep.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
-                        <div class="swiper-slide"> <img loading="lazy" src="photos/villanykep.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
-                        
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+<div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><img loading="lazy" src="photos/bpkep.jpg" class="w-100 d-block"/><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"><img loading="lazy" src="photos/aggtelek.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"><img loading="lazy" src="photos/keszthelykep.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"> <img loading="lazy" src="photos/villanykep.jpg" class="w-100 d-block" /><div class="swiper-lazy-preloader"></div></div>
+            
             </div>
-
-        <!-- csomagajánlataink-->
-
-        <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Csomagajánlataink</h2>
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350; margin:auto;">
-                    <img src="photos/3town.png" class="card-img-top" alt="turacsomag1">
-                    <div class="card-body">
-                        <h5>Arany csomag(2 napra)</h5>
-                        <h6 class="mb-4">100.000Ft/fő</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1"> Az árban</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Belépőjegyek
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                3 étkezés
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                exkluzív programok
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1"> Részletek</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Városnéző kocsikázás
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Idegenvezetés
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                taxizás
-                            </span>
-
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés: </h6>
-                            <span class="badge rounded-pill bg-light">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                        <button type="button" class="btn btn-outline-success">Foglalj most!</button>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350; margin:auto;">
-                    <img src="photos/1beach.png" class="card-img-top" alt="turacsomag1">
-                    <div class="card-body">
-                        <h5>Ezüst csomag(1 napra)</h5>
-                        <h6 class="mb-4">70.000Ft/fő</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1"> Az árban</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Belépőjegyek
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                2 étkezés
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                programok
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1"> Részletek</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Városnéző túra
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                3x taxi utazás
-                            </span>
-                            
-
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés: </h6>
-                            <span class="badge rounded-pill bg-light">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                        <button type="button" class="btn btn-outline-success">Foglalj most!</button>
-                    </div>
-                    </div>
-                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+</div>
 
 
-                <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350; margin:auto;">
-                    <img src="photos/2forest.png" class="card-img-top" alt="turacsomag1">
-                    <div class="card-body">
-                        <h5>Bronz csomag</h5>
-                        <h6 class="mb-4">50.000Ft/fő</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1"> Az árban (1 napra)</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Belépőjegy
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Ebéd
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                30 perces idegenvezetés
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1"> Részletek</h6>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Program 1
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Program 2
-                            </span>
-                            <span class="badge bg-light text-dark mb-3 text-wrap">
-                                Program 3
-                            </span>
-
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés: </h6>
-                            <span class="badge rounded-pill bg-light">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                            <button type="button" class="btn btn-outline-success">Foglalj most!</button>
-                    </div>
-                    </div>
-                </div>
-
-                <script src="getData.js"></script>
-                <script>
-                            getData('../server/cards.php',renderTable)
-
-                            function renderTable(data){
-                                console.log(data);
-                                /*
-                                document.querySelector('tbody').innerHTML = data.map(obj=>`
-                                <tr>
-                                    <td>${obj.Varosok}</td>
-                                    
-                                </tr>
-                                `).join('')
-                                */
-                            }
-                </script>
-
-
-
-
-
-
-                <div class="col-lg-12 text-center mt-5">
-                    <a href="index.php?prog=jaratok.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Továbbiak megtekintése</a>
-
-                </div>
+<div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 p-4 mb-lg-0 mb-3 mt-5 bg-white rounded">
+            <h2 class=" pt-4 mb-4 text-center fw-bold h-font">Foglalj le egyszerűen egy utat Magyarországra a HUTOURSNÁL!</h2>
+          
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <h3>Lépés 1</h3>
+              <p>Kattints a gombra!</p>
+              <a href="index.php?prog=jaratok.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GOMB</a>
             </div>
+            <div class="col-md-4 text-center">
+              <h3>Lépés 2</h3>
+              <p>Válaszd ki azt ahova szeretnél utazni.</p>
+              <h1><i class="bi bi-pin-map-fill"></i></h1>
+            </div>
+            <div class="col-md-4 text-center">
+              <h3>Lépés 3</h3>
+              <p>Foglald le!</p>
+              <h1><i class="bi bi-check2-square"></i></h1>
+            </div>
+          </div>
         </div>
+                
+                    </div>
+                </div>
+    </div>
+
+
+
 
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Elhelyezkedésünk</h2>
     <div class="container">
@@ -206,7 +71,7 @@
             <div class="col-lg-4 col-md-4">
             <div class="bg-white p-4 rounded mb-3">
                 <div class="badge bg-light text-dark fs-6 p-2">
-                    <h5>Nyitvatartás</h5>
+                    <h5>Irodánk Nyitvatartása</h5>
 
             </div>
             <div>

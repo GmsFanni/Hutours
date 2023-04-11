@@ -62,7 +62,7 @@
   function render(data){
     console.log(data)
     if(data.msg=='ok')
-      location.href='./felh.php'//átirányítás
+      location.href='./index.php'//átirányítás
   }
   
 </script>

@@ -2,7 +2,7 @@
     logoutUser('../server/logout.php',render)
 
     function render(data){
-        console.log('sikeres kijelentkezés!')
+        console.log('Sikeres kijelentkezés!')
         location.href='./index.php'
     }
 </script>

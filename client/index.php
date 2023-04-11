@@ -95,15 +95,6 @@
         <?php require('login.php'); ?>
                     
 
-<script> 
-  function render(data){
-    console.log(data)
-    if(data.msg=='ok')
-      location.href='./index.php'//átirányítás
-  }
-</script>
-
-
 </body>
 </html>
 

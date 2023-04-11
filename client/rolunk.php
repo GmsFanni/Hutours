@@ -32,13 +32,12 @@
             <p>Az oldalunk célja, hogy megkönnyítsük az utazást azoknak az embereknek, akik szeretnének kényelmes és megbízható közlekedést találni Magyarországon belül. Az oldalon keresztül különböző buszjáratokat találhatsz, amelyek között könnyedén válogathatsz az indulási időpontok és az útvonalak alapján.</p>
         </div>
         <div class="col-lg-5 col-md-5 mb-4 ">
-            <img src="photos/busz.jpg" alt="Buszkép" class="w-100 img-fluid">
+            <img src="photos/busz.jpg" alt="Buszkép" class="w-100 img-fluid rounded">
 
         </div>
 
         <div class="col-lg-5 col-md-5 mb-4 ">
-            <img src="photos/villanykep.jpg" alt="Buszkép" class="w-100 img-fluid">
-
+            <img src="photos/BUS.png" class="img-fluid rounded" alt="logo">
         </div>
 
         <div class="col-lg-6 col-md-5 mb-4 ">

@@ -1,4 +1,5 @@
 <?php
+        session_start();
         require_once "configDb.php";
 
         $v_nev = $_POST["v_nev"];

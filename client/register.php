@@ -114,7 +114,7 @@
         success : function (s) {
             console.log(s)
             //document.getElementById("register-close").click();
-            document.getElementById("register-modal-body").innerHTML = "sikeres regisztracio"
+            document.getElementById("register-modal-body").innerHTML = "Ön sikeresen regisztrált honlapunkra!"
 
             document.getElementById("au-name").innerHTML = `
                 <a class='nav-link btn btn-outline-dark my-2 my-sm-0' href='#'>${s}</a>
