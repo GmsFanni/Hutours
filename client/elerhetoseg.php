@@ -83,7 +83,7 @@
                             <small class="form-text text-muted float-end"><span id="charCount" class="float-right">0</span>/250</small>
                         </div>
                             <br>
-                        <input type="submit" value="Küldés" class="btn btn-primary shadow-none " id="myButton" onclick="klikk()">
+                        <input type="button" value="Küldés" class="btn btn-primary shadow-none " id="myButton" onclick="klikk()">
                         
                         </div>
                         
@@ -122,6 +122,13 @@
             else{ alert("Töltse ki az összes mezőt");  return false; }
         }
 
+        function verifyemail(str){
+            if (str.indexOf("@") !== -1 && str.indexOf(".") !== -1) 
+                return true;
+            else 
+                return false;
+        }
+
         function tartalmaz(){
             var email2 = document.getElementById("v_email").value;
             return verifyemail(email2);
@@ -135,47 +142,74 @@
     
 
         function klikk(){
+            /*
             if (!uresCheck()) return false;
             if (!tartalmaz()) {
             alert("Hibás email cím!") ;
             return false ;
-        }
+            }
+            */
+
+            console.log(uresCheck());
+            console.log(tartalmaz());
+
+            if (uresCheck() == false || tartalmaz() == false) {
+                alert("Hibás kitöltés.");
+            } else {
+                var fd = new FormData();
+                fd.append("v_nev", document.getElementById("v_nev").value);
+                fd.append("v_email", document.getElementById("v_email").value);
+                fd.append("v_targy", document.getElementById("v_targy").value);
+                fd.append("v_szoveg", document.getElementById("v_szoveg").value);
+                $.ajax({
+                    url: '../server/velemeny.php',
+                    type: 'POST',
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    success: function(response) {
+                        let jsonData = JSON.parse(response);
+                        console.log(jsonData);
+                        if(jsonData.success == 1){
+                            alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")
+                            document.getElementById("myForm").reset();  
+                            //location.href = 'index.php';
+                        }
+                        else{
+                            alert("HIBAA")
+                        }
+                        
+                        
+                    }
+                    
+    
+                });
+            }
     
 
+            /*
+// felugró ablak bezárása
+                $('#message').click(function() {
+                    $(this).fadeOut();
+                    
+                });
+            */
 
-    $(document).ready(function() {
-        // form küldése AJAX-szal
-        $('#myForm').submit(function(event) {
-            event.preventDefault();
-            $.ajax({
-            url: '../server/velemeny.php',
-            type: 'POST',
-            data: $('#myForm').serialize(),
-            success: function(response) {
-                let jsonData = JSON.parse(response);
-                console.log(jsonData);
-                if(JSON.success == "1"){
-                    location.href = 'index.php';
-                    alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")
-                    document.getElementById("#myForm").reset();  
-                }
-                else{
-                    alert("HIBAA")
-                }
-                 
+            $(document).ready(function() {
+                // form küldése AJAX-szal
+
                 
-            }
-            
 
+                /*
+                $('#myForm').submit(function(event) {
+                    event.preventDefault();
+                    
+                });
+                */
+                
+                
             });
-        });
-        
-        // felugró ablak bezárása
-        $('#message').click(function() {
-            $(this).fadeOut();
-            
-        });
-    });
 
     }
 

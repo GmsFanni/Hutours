@@ -10,19 +10,24 @@
         $sql = "INSERT INTO `velemeny` (`v_nev`, `v_email`, `v_targy`, `v_szoveg`) 
                 VALUES (:v_nev, :v_email, :v_targy, :v_szoveg)";
 
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(":v_nev", $v_nev);
-        $stmt->bindParam(":v_email", $v_email);
-        $stmt->bindParam(":v_targy", $v_targy);
-        $stmt->bindParam(":v_szoveg", $v_szoveg);
-        $stmt->execute();
+        if ($stmt = $db->prepare($sql)) {
+                $stmt->bindParam(":v_nev", $v_nev);
+                $stmt->bindParam(":v_email", $v_email);
+                $stmt->bindParam(":v_targy", $v_targy);
+                $stmt->bindParam(":v_szoveg", $v_szoveg);
+                $stmt->execute();
+                echo json_encode(array('success' => 1));
+        } else {
+                echo json_encode(array('success' => 0));
+        }
+        
 
      /*   
         $response = "Sikeres mentés!";
         
         echo $response;*/
 
-        echo json_encode(array('success' => 1));
+        
 ?>
  
 

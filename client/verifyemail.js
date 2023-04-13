@@ -1,3 +1,4 @@
+
 function verifyemail(str){
     if (str.indexOf("@") !== -1 && str.indexOf(".") !== -1) 
             return true;
@@ -5,4 +6,4 @@ function verifyemail(str){
             return false;
     }
 
-    module.exports = verifyemail;
+//    module.exports = verifyemail;
