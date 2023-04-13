@@ -53,6 +53,7 @@
         console.log(data)
         let str=''
         for(let obj of data){
+            console.log(obj);
             str+=`
             <img class="img-fluid mb-2" src="photos/varosok/${obj.foto_url}" alt="kép">
             
@@ -71,7 +72,7 @@
                     <td>${obj.ido_oda}</td>
                     <td>${obj.ido_visszamikor}</td>
                     <td>${obj.ido_vissza}</td>
-                    <td><button class="btn-secondary" onclick="foglal(this)">Foglalás</button></td>
+                    <td><button class="btn-secondary" id="${obj.id}" onclick="foglal(this)">Foglalás</button></td>
             </tr>
 
             </tbody>
@@ -84,8 +85,17 @@
         document.querySelector('.details').innerHTML = str        
         }
 
-        function foglal(data){
-            console.log(ok);
+        function foglal(obj){
+            console.log("ok",obj.id);
+
+            foglalas('../server/foglalas.php?id='+obj.id, rendermsg)
+            
+
+        }
+
+        function rendermsg(data){
+            console.log(data);
+            alert("Válaszát rögzítettük! Köszönjük szépen a foglalást!")
         }
 
         

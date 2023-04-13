@@ -1,7 +1,3 @@
-<?php
-  session_start();
-  
-?>
 <h3 class="text-center mb-3 mt-3">Melyik helység időjárása érdekel?</h3>
 <select id="cities" class="form-select" onchange="showWeather(this)">
     <option value="0">válassz egy települést...</option>

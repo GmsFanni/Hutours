@@ -100,7 +100,7 @@
     <?php require('labjegyzet.php'); ?>
 
     
-
+    <script src="verifyemail.js"></script>
     <script>
 
         function updateCharCount() {
@@ -124,29 +124,23 @@
 
         function tartalmaz(){
             var email2 = document.getElementById("v_email").value;
+            return verifyemail(email2);
 
-            // Ellenőrizzük, hogy az email2 változó egy string típusú értéket tartalmaz-e
-                if (typeof email2 === "string") {
-                    // Ellenőrizzük, hogy az email2 változó tartalmazza-e az @ karaktert
-                    if (email2.indexOf("@") !== -1 && email2.indexOf(".") !== -1) {
-                    return true;
-                    } else {
-                    alert("Az email cím érvénytelen!"); return false;
-                    }
-                } else {
-                    alert("Az email cím érvénytelen!"); return false;
-                }	
+            
         }
+        
+                	
 
 
-
-
-
+    
 
         function klikk(){
             if (!uresCheck()) return false;
-            if (!tartalmaz()) return false;
+            if (!tartalmaz()) {
+            alert("Hibás email cím!") ;
+            return false ;
         }
+    
 
 
     $(document).ready(function() {
@@ -158,7 +152,18 @@
             type: 'POST',
             data: $('#myForm').serialize(),
             success: function(response) {
-                alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")   
+                let jsonData = JSON.parse(response);
+                console.log(jsonData);
+                if(JSON.success == "1"){
+                    location.href = 'index.php';
+                    alert("Köszönjük kérdését, kollegánk hamarosan felveszi önnel a kapcsolatot!")
+                    document.getElementById("#myForm").reset();  
+                }
+                else{
+                    alert("HIBAA")
+                }
+                 
+                
             }
             
 
@@ -172,6 +177,7 @@
         });
     });
 
+    }
 
         
     </script>
