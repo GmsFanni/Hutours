@@ -1,6 +1,6 @@
 <h1 class="mt-2 text-center">Járataink</h1>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6 col-md-6">
         <table class="table table-striped">
             <thead class="thead-dark">
                 <th class="text-center"><h4>Helyeink, ahova tartunk</h4></th>
@@ -11,7 +11,7 @@
         </table>
     </div>
 
-    <div class="col-md-6 details mt-2 ">
+    <div class="col-lg-6 col-md-6 details mt-2 ">
         <table class="table table-secondary text-center">
             
 

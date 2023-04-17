@@ -3,7 +3,7 @@
     <option value="0">válassz egy települést...</option>
 </select>
  <!-- <div class="descr"></div> -->
- <div class="card text-dark bg-white mb-3 col-md-4 mb-5 mt-5 mx-auto" >
+ <div class="card text-dark bg-white mb-3 col-md-5 col-lg-4 col-sm-6 mb-5 mt-5 mx-auto" >
     <div class="card-header name text-center">Város: </div>
     <div class="card-body ">
         <div class="text-center"><img class="imgUrl align-center" src="" alt=""></div>

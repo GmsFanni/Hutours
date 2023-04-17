@@ -22,7 +22,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">HUTOURS</a>
-                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -49,7 +51,7 @@
                       if(isset($_SESSION['username'])){
                         echo "
                           <div class='d-flex'>
-                            <a class='nav-link btn btn-outline-dark shadow-none me-lg-3 me-2' href='index.php?prog=userfelulet.php'>{$_SESSION['username']}</a>
+                            <a class='btn btn-outline-dark shadow-none me-lg-3 me-2' href='index.php?prog=userfelulet.php'>{$_SESSION['username']}</a>
                           </div>
                           <div class='d-flex'>
                             <a class='btn btn-outline-dark shadow-none' href='index.php?prog=logout.php'>Logout</a>
@@ -73,6 +75,8 @@
             </div>
         </nav>
 
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <div class="container">
