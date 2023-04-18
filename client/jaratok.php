@@ -87,8 +87,15 @@
 
         function foglal(obj){
             console.log("ok",obj.id);
-
-            foglalas('../server/foglalas.php?id='+obj.id, rendermsg)
+            <?php
+                      if(isset($_SESSION['username'])){
+                        echo "foglalas('../server/foglalas.php?id='+obj.id, rendermsg)";
+                    }else{
+                        echo "alert('Jelentkezz be a foglaláshoz!')";
+                    }
+                        
+            ?>
+            
             
 
         }
