@@ -95,9 +95,12 @@
 
         <?php require('register.php'); ?>
         <?php require('login.php'); ?>
+        
                     
 
 </body>
 </html>
+
+<?php require('labjegyzet.php'); ?>
 
 

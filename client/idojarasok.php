@@ -23,14 +23,9 @@
     </div>
 </div>
 
+<script src="getData.js"></script>
 <script>
-    const getData = async (url, renderFc) => {
-        const response = await fetch(url)
-        const data = await response.json()
-        renderFc(data)
-    }
-
-
+    
     getData('../server/helyek.php', renderOptions)
 
     function renderOptions(data) {
@@ -59,4 +54,3 @@
 
 
 </script>
-<?php require('labjegyzet.php'); ?>

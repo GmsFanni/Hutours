@@ -41,5 +41,6 @@ $wind=$data->wind->speed;
 // Meghatározzuk az aktuális időt
 $currentTime = time();
 
-echo json_encode(["name"=>$name,"descr"=>$descr,"imgUrl"=>$imgUrl,"tempMax"=>$tempMax,"tempMin"=>$tempMin,"humidity"=>$humidity,"wind"=>$wind]);
+echo json_encode(["name"=>$name,"descr"=>$descr,"imgUrl"=>$imgUrl,"tempMax"=>$tempMax,"tempMin"=>$tempMin,
+"humidity"=>$humidity,"wind"=>$wind]);
 ?>

@@ -20,14 +20,7 @@
         } else {
                 echo json_encode(array('success' => 0));
         }
-        
-
-     /*   
-        $response = "Sikeres mentés!";
-        
-        echo $response;*/
-
-        
+            
 ?>
  
 

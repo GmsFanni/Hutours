@@ -63,6 +63,7 @@
                         <th>Óra:perc:mp</th>
                         <th>Indulás vissza</th>
                         <th>Óra:perc:mp</th>
+                        <th>Ára:</th>
                         <th></th>
                     </tr>
 
@@ -72,6 +73,7 @@
                     <td>${obj.ido_oda}</td>
                     <td>${obj.ido_visszamikor}</td>
                     <td>${obj.ido_vissza}</td>
+                    <th>${obj.arak}</th>
                     <td><button class="btn-secondary" id="${obj.id}" onclick="foglal(this)">Foglalás</button></td>
             </tr>
 
@@ -92,12 +94,8 @@
                         echo "foglalas('../server/foglalas.php?id='+obj.id, rendermsg)";
                     }else{
                         echo "alert('Jelentkezz be a foglaláshoz!')";
-                    }
-                        
+                    }          
             ?>
-            
-            
-
         }
 
         function rendermsg(data){
@@ -123,6 +121,5 @@
 
 </script>
 
-<?php require('labjegyzet.php'); ?>
 
 

@@ -97,7 +97,7 @@
 
     </div>
     
-    <?php require('labjegyzet.php'); ?>
+    
 
     
     <script src="verifyemail.js"></script>
@@ -142,13 +142,7 @@
     
 
         function klikk(){
-            /*
-            if (!uresCheck()) return false;
-            if (!tartalmaz()) {
-            alert("Hibás email cím!") ;
-            return false ;
-            }
-            */
+            
 
             console.log(uresCheck());
             console.log(tartalmaz());
@@ -186,33 +180,7 @@
     
                 });
             }
-    
-
-            /*
-// felugró ablak bezárása
-                $('#message').click(function() {
-                    $(this).fadeOut();
-                    
-                });
-            */
-
-            $(document).ready(function() {
-                // form küldése AJAX-szal
-
-                
-
-                /*
-                $('#myForm').submit(function(event) {
-                    event.preventDefault();
-                    
-                });
-                */
-                
-                
-            });
-
-    }
-
+        }
         
     </script>
 

@@ -98,7 +98,7 @@
 
 
 
-            <?php require('labjegyzet.php'); ?>
+            
     
 
         

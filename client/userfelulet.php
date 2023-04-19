@@ -17,6 +17,7 @@
             <th>Óra:perc:mp</th>
             <th>Indulás vissza</th>
             <th>Óra:perc:mp</th>
+            <th>Ára: </th>
             <th></th>
                     
     </thead>
@@ -24,6 +25,7 @@
         
     </tbody>
 </table>
+<img src="photos/BUS.png" class="img-fluid rounded mx-auto d-block" alt="logobus">
 
 <script src="getData.js"></script>
 <script>
@@ -38,6 +40,7 @@
                     <td>${obj.odaora}</td>
                     <td>${obj.visszadatum}</td>
                     <td>${obj.visszaora}</td>
+                    <td>${obj.ar}</td>
             
         </tr>
         `).join('')

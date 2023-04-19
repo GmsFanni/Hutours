@@ -53,7 +53,7 @@
 
     </div>
 
-    <?php require('labjegyzet.php'); ?>
+    
 </div>
         
     
